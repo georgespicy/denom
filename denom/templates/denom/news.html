@@ -1,80 +1,32 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
-     <!--header section start -->
-     <div class="header_section">
-        <div class="container-fluid">
-           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="logo"><a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}"></a></div>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                       <a class="nav-link" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="{% url 'about' %}">About</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="{% url 'marriage' %}">Marriage</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="{% url 'news' %}">News</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-                    </li>
-                 </ul>
-              </div>
-           </nav>
+{% extends 'base.html' %} {% load static %} {% block content %} {% include 'include/navbar.html' %}<!-- news section start -->
+<div class="news_section layout_padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="news_main">
+          <h1 class="news_taital">What says Our Grooms</h1>
+          <div class="news_section_2">
+            <h3 class="lina_text">Lina and jorv</h3>
+            <p class="dummy_text">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is thaIt is a long established fact
+              that a reader will be distracted by the readable content of a page
+              when looking at its layout. The point of using Lorem Ipsum is tha
+            </p>
+            <div class="quick_icon">
+              <img src="{% static 'images/quick-icon.png' %}" />
+            </div>
+          </div>
         </div>
-     </div>
-     <!--header section end -->
-     <!-- news section start -->
-     <div class="news_section layout_padding">
-        <div class="container-fluid">
-           <div class="row">
-              <div class="col-sm-8">
-                 <div class="news_main">
-                    <h1 class="news_taital">What says Our Grooms</h1>
-                    <div class="news_section_2">
-                       <h3 class="lina_text">Lina and jorv</h3>
-                       <p class="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is thaIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is tha</p>
-                       <div class="quick_icon"><img src="{% static 'images/quick-icon.png' %}"></div>
-                    </div>
-                 </div>
-              </div>
-              <div class="col-sm-4 padding_right_0">
-                 <div class="news_img"><img src="{% static 'images/news-img.png' %}"></div>
-              </div>
-           </div>
+      </div>
+      <div class="col-sm-4 padding_right_0">
+        <div class="news_img">
+          <img src="{% static 'images/news-img.png' %}" />
         </div>
-     </div>
-     <!-- news section end -->
-     <!-- footer section start -->
-     <div class="footer_section">
-        <div class="container">
-           <div class="social_icon">
-              <a class="padding_10" href="#"><img src="{% static 'images/fb-icon.png' %}"></a>
-              <a class="padding_10" href="#"><img src="{% static 'images/twitter-icon.png' %}"></a>
-              <a class="padding_10" href="#"><img src="{% static 'images/linkedin-icon.png' %}"></a>
-              <a class="padding_10" href="#"><img src="{% static 'images/youtub-icon.png' %}"></a>
-           </div>
-           <div class="location_main">
-              <div class="location_text"><img src="{% static 'images/map-icon.png' %}"><span class="padding10"><a href="#">Gb road 123 london Uk </a></span></div>
-              <div class="location_text center"><img src="{% static 'images/call-icon.png' %}"><span class="padding10"><a href="#">Call : (+01) 123456789012</a></span></div>
-              <div class="location_text right"><img src="{% static 'images/mail-icon.png' %}"><span class="padding10"><a href="#">demo@gmail.com</a></span></div>
-           </div>
-           <div class="Enter_mail_main">
-              <input type="text" class="Enter_text" placeholder="Enter Your Name" name="Enter Your Name">
-              <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-           </div>
-        </div>
-     </div>
-     <!-- footer section end -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- news section end -->
 {% endblock content %}

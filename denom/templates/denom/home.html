@@ -4,7 +4,9 @@
   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="logo">
-        <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" /></a>
+        <a href="{% url 'home' %}"
+          ><img src="{% static 'images/logo.png' %}"
+        /></a>
       </div>
       <button
         class="navbar-toggler"
@@ -68,7 +70,9 @@
                     distracted by the readable content of a page
                   </p>
                   <div class="btn_main">
-                    <div class="contact_bt"><a href="{% url 'contact' %}">Contact Us</a></div>
+                    <div class="contact_bt">
+                      <a href="{% url 'contact' %}">Contact Us</a>
+                    </div>
                     <div class="readmore_bt active">
                       <a href="#">Read More</a>
                     </div>
@@ -84,7 +88,9 @@
                     distracted by the readable content of a page
                   </p>
                   <div class="btn_main">
-                    <div class="contact_bt"><a href="{% url 'contact' %}">Contact Us</a></div>
+                    <div class="contact_bt">
+                      <a href="{% url 'contact' %}">Contact Us</a>
+                    </div>
                     <div class="readmore_bt active">
                       <a href="#">Read More</a>
                     </div>
@@ -100,7 +106,9 @@
                     distracted by the readable content of a page
                   </p>
                   <div class="btn_main">
-                    <div class="contact_bt"><a href="{% url 'contact' %}">Contact Us</a></div>
+                    <div class="contact_bt">
+                      <a href="{% url 'contact' %}">Contact Us</a>
+                    </div>
                     <div class="readmore_bt active">
                       <a href="#">Read More</a>
                     </div>
@@ -116,7 +124,9 @@
                     distracted by the readable content of a page
                   </p>
                   <div class="btn_main">
-                    <div class="contact_bt"><a href="{% url 'contact' %}">Contact Us</a></div>
+                    <div class="contact_bt">
+                      <a href="{% url 'contact' %}">Contact Us</a>
+                    </div>
                     <div class="readmore_bt active">
                       <a href="#">Read More</a>
                     </div>
@@ -139,9 +149,15 @@
     <div class="row">
       <div class="col-lg-6 padding_0">
         <div class="abiut_images_main">
-          <div><img src="{% static 'images/img-1.png' %}" class="image_1" /></div>
-          <div><img src="{% static 'images/img-2.png' %}" class="image_2" /></div>
-          <div class="main"><img src="{% static 'images/img-3.png' %}" class="image_3" /></div>
+          <div>
+            <img src="{% static 'images/img-1.png' %}" class="image_1" />
+          </div>
+          <div>
+            <img src="{% static 'images/img-2.png' %}" class="image_2" />
+          </div>
+          <div class="main">
+            <img src="{% static 'images/img-3.png' %}" class="image_3" />
+          </div>
         </div>
       </div>
       <div class="col-lg-6 padding_0">
@@ -164,7 +180,9 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-6 padding_left_0">
-        <div class="marriage_img"><img src="{% static 'images/marriage-img.png' %}" /></div>
+        <div class="marriage_img">
+          <img src="{% static 'images/marriage-img.png' %}" />
+        </div>
       </div>
       <div class="col-lg-6">
         <div class="marriage_taital_main">
@@ -176,7 +194,10 @@
           <div class="marriage_section_2">
             <div class="marriage_taital_left">
               <div class="car_box">
-                <img src="{% static 'images/car-img.png' %}" class="car_image" />
+                <img
+                  src="{% static 'images/car-img.png' %}"
+                  class="car_image"
+                />
               </div>
             </div>
             <div class="marriage_taital_right">
@@ -190,7 +211,10 @@
           <div class="marriage_section_2">
             <div class="marriage_taital_left">
               <div class="car_box">
-                <img src="{% static 'images/balls-img.png' %}" class="car_image" />
+                <img
+                  src="{% static 'images/balls-img.png' %}"
+                  class="car_image"
+                />
               </div>
             </div>
             <div class="marriage_taital_right">
@@ -204,7 +228,10 @@
           <div class="marriage_section_2">
             <div class="marriage_taital_left">
               <div class="car_box">
-                <img src="{% static 'images/water-bottle-img.png' %}" class="car_image" />
+                <img
+                  src="{% static 'images/water-bottle-img.png' %}"
+                  class="car_image"
+                />
               </div>
             </div>
             <div class="marriage_taital_right">
@@ -233,7 +260,9 @@
       <div class="row">
         <div class="col-md-6">
           <h6 class="date_text">06<br />Feb</h6>
-          <div class="image_4"><img src="{% static 'images/img-4.png' %}" /></div>
+          <div class="image_4">
+            <img src="{% static 'images/img-4.png' %}" />
+          </div>
         </div>
         <div class="col-md-6">
           <h4 class="liya_text">Liya Mainial Catt</h4>
@@ -271,7 +300,9 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="image_5"><img src="{% static 'images/img-4.png' %}" /></div>
+          <div class="image_5">
+            <img src="{% static 'images/img-4.png' %}" />
+          </div>
         </div>
       </div>
     </div>
@@ -282,42 +313,47 @@
 <div class="contact_srction layout_padding">
   <div class="container">
     <h1 class="contact_taital">Requeste A call Back</h1>
-    <div class="contact_srction_2">
-      <div class="mail_main">
-        <div class="row">
-          <div class="col-md-6">
-            <input
-              type="text"
-              class="mail_text"
-              placeholder="Full Name"
-              name="Full Name"
-            />
-            <input
-              type="text"
-              class="mail_text"
-              placeholder="Phone Number"
-              name="Phone Number"
-            />
+    <form method="POST">
+      {% csrf_token %}
+      <div class="contact_srction_2">
+        <div class="mail_main">
+          <div class="row">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="mail_text"
+                placeholder="Full Name"
+                name="Full Name"
+              />
+              <input
+                type="text"
+                class="mail_text"
+                placeholder="Phone Number"
+                name="Phone Number"
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="mail_text"
+                placeholder="Email"
+                name="Email"
+              />
+              <textarea
+                class="massage-bt"
+                placeholder="Massage"
+                rows="5"
+                id="comment"
+                name="Massage"
+              ></textarea>
+            </div>
           </div>
-          <div class="col-md-6">
-            <input
-              type="text"
-              class="mail_text"
-              placeholder="Email"
-              name="Email"
-            />
-            <textarea
-              class="massage-bt"
-              placeholder="Massage"
-              rows="5"
-              id="comment"
-              name="Massage"
-            ></textarea>
+          <div class="send_bt">
+            <input type="submit" value="SEND" />
           </div>
         </div>
-        <div class="send_bt"><a href="#">SEND</a></div>
       </div>
-    </div>
+    </form>
   </div>
 </div>
 <!-- contact section end -->
@@ -337,53 +373,19 @@
               that a reader will be distracted by the readable content of a page
               when looking at its layout. The point of using Lorem Ipsum is tha
             </p>
-            <div class="quick_icon"><img src="{% static 'images/quick-icon.png' %}" /></div>
+            <div class="quick_icon">
+              <img src="{% static 'images/quick-icon.png' %}" />
+            </div>
           </div>
         </div>
       </div>
       <div class="col-sm-4 padding_right_0">
-        <div class="news_img"><img src="{% static 'images/news-img.png' %}" /></div>
+        <div class="news_img">
+          <img src="{% static 'images/news-img.png' %}" />
+        </div>
       </div>
     </div>
   </div>
 </div>
 <!-- news section end -->
-<!-- footer section start -->
-<div class="footer_section">
-  <div class="container">
-    <div class="social_icon">
-      <a class="padding_10" href="#"><img src="{% static 'images/fb-icon.png' %}" /></a>
-      <a class="padding_10" href="#"><img src="{% static 'images/twitter-icon.png' %}" /></a>
-      <a class="padding_10" href="#"><img src="{% static 'images/linkedin-icon.png' %}" /></a>
-      <a class="padding_10" href="#"><img src="{% static 'images/youtub-icon.png' %}" /></a>
-    </div>
-    <div class="location_main">
-      <div class="location_text">
-        <img src="{% static 'images/map-icon.png' %}" /><span class="padding10"
-          ><a href="#">Gb road 123 london Uk </a></span
-        >
-      </div>
-      <div class="location_text center">
-        <img src="{% static 'images/call-icon.png' %}" /><span class="padding10"
-          ><a href="#">Call : (+01) 123456789012</a></span
-        >
-      </div>
-      <div class="location_text right">
-        <img src="{% static 'images/mail-icon.png' %}" /><span class="padding10"
-          ><a href="#">demo@gmail.com</a></span
-        >
-      </div>
-    </div>
-    <div class="Enter_mail_main">
-      <input
-        type="text"
-        class="Enter_text"
-        placeholder="Enter Your Name"
-        name="Enter Your Name"
-      />
-      <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-    </div>
-  </div>
-</div>
-<!-- footer section end -->
 {% endblock content %}

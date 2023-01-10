@@ -827,7 +827,7 @@ img.image_3 {
     text-align: center;
 }
 
-.send_bt a {
+.send_bt input {
     width: 100%;
     float: left;
     background-color: #fb8a05;
@@ -836,10 +836,11 @@ img.image_3 {
     padding: 10px 0px;
     font-size: 16px;
     margin-top: 40px;
-    border-radius: 40px;
+    outline: none;
+    border: none;
 }
 
-.send_bt a:hover {
+.send_bt input:hover {
     background-color: #b538a4;
     color: #ffffff;
 }
@@ -983,14 +984,10 @@ input.Enter_text::placeholder {
     color: #9e9c9c;
 }
 
-.subscribe_bt {
-    width: 170px;
-    float: left;
-    margin-top: 10px;
-}
 
-.subscribe_bt a {
-    width: 100%;
+.subscribe_bt{
+    width: 170px;
+    margin-top: 10px;
     float: left;
     font-size: 18px;
     color: #fb8a05;
@@ -998,6 +995,8 @@ input.Enter_text::placeholder {
     text-align: center;
     padding: 10px 0px;
     text-transform: uppercase;
+    outline: none;
+    border: none;
 }
 
 .subscribe_bt a:hover {
