@@ -312,8 +312,8 @@
 <!-- contact section start -->
 <div class="contact_srction layout_padding">
   <div class="container">
-    <h1 class="contact_taital">Requeste A call Back</h1>
-    <form method="POST">
+    <h1 class="contact_taital">Request A call Back</h1>
+    <form method="POST" action="{% url 'feedback' %}">
       {% csrf_token %}
       <div class="contact_srction_2">
         <div class="mail_main">
@@ -323,13 +323,13 @@
                 type="text"
                 class="mail_text"
                 placeholder="Full Name"
-                name="Full Name"
+                name="full_name"
               />
               <input
                 type="text"
                 class="mail_text"
                 placeholder="Phone Number"
-                name="Phone Number"
+                name="phone_number"
               />
             </div>
             <div class="col-md-6">
@@ -337,14 +337,14 @@
                 type="text"
                 class="mail_text"
                 placeholder="Email"
-                name="Email"
+                name="email"
               />
               <textarea
                 class="massage-bt"
                 placeholder="Massage"
                 rows="5"
                 id="comment"
-                name="Massage"
+                name="message"
               ></textarea>
             </div>
           </div>

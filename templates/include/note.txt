@@ -1,0 +1,23 @@
+ if request.method == 'POST':
+        footerForm = SubcriberForm(request.POST)
+        if footerForm.is_valid():
+            footerForm.save()
+            return redirect('home')
+        else:
+            footerForm = SubcriberForm()
+    else:
+        footerForm = SubcriberForm()
+    context = {
+        'footerForm': footerForm,
+    }
+    return render(request, 'denom/contact.html', context)
+
+
+    <textarea
+              class="massage-bt"
+              placeholder="Massage"
+              rows="5"
+              id="comment"
+              name="Massage"
+            ></textarea>
+              {% endcomment %}

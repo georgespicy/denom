@@ -33,9 +33,9 @@
         >
       </div>
     </div>
-    <form class="Enter_mail_main" method="POST">
+    <form class="Enter_mail_main" method="POST" action="{% url 'footer' %}">
       {% csrf_token %}
-      {{footerForm}}
+      <input type="email" name="email" class="Enter_text" placeholder="user@email.com">
       <input class="subscribe_bt" type="submit" value="Subscribe" />
     </form>
   </div>

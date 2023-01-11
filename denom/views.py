@@ -1,107 +1,75 @@
 from django.shortcuts import render, redirect
-from .forms import SubcriberForm
+from .forms import ContactForm
+from .models import Subcriber, Contact
 
 # Create your views here.
 
 def home(request):
-# ================================================ footer subcribe form =================================
-    # footerForm = SubcriberForm(request.POST)
-    if request.method == 'POST':
-        footerForm = SubcriberForm(request.POST)
-        if footerForm.is_valid():
-            footerForm.save()
-            return redirect('home')
-        else:
-            footerForm = SubcriberForm()
-    else:
-        footerForm = SubcriberForm()
     context = {
-        'footerForm': footerForm,
+
     }
     return render(request, 'denom/home.html', context)
 
 
 def about(request):
-# ================================================ footer subcribe form =================================
-    # footerForm = SubcriberForm(request.POST)
-    if request.method == 'POST':
-        footerForm = SubcriberForm(request.POST)
-        if footerForm.is_valid():
-            footerForm.save()
-            return redirect('home')
-        else:
-            footerForm = SubcriberForm()
-    else:
-        footerForm = SubcriberForm()
     context = {
-        'footerForm': footerForm,
+
     }
     return render(request, 'denom/about.html', context)
 
 def contact(request):
-# ================================================ footer subcribe form =================================
-    # footerForm = SubcriberForm(request.POST)
     if request.method == 'POST':
-        footerForm = SubcriberForm(request.POST)
-        if footerForm.is_valid():
-            footerForm.save()
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
             return redirect('home')
         else:
-            footerForm = SubcriberForm()
+            print('An error occurred')
     else:
-        footerForm = SubcriberForm()
+        contact_form = ContactForm()
+
     context = {
-        'footerForm': footerForm,
+        'contact_form': contact_form
     }
     return render(request, 'denom/contact.html', context)
 
+
+
 def blog(request):
-# ================================================ footer subcribe form =================================
-    # footerForm = SubcriberForm(request.POST)
-    if request.method == 'POST':
-        footerForm = SubcriberForm(request.POST)
-        if footerForm.is_valid():
-            footerForm.save()
-            return redirect('home')
-        else:
-            footerForm = SubcriberForm()
-    else:
-        footerForm = SubcriberForm()
     context = {
-        'footerForm': footerForm,
+
     }
     return render(request, 'denom/blog.html', context)
 
 def marriage(request):
-# ================================================ footer subcribe form =================================
-    # footerForm = SubcriberForm(request.POST)
-    if request.method == 'POST':
-        footerForm = SubcriberForm(request.POST)
-        if footerForm.is_valid():
-            footerForm.save()
-            return redirect('home')
-        else:
-            footerForm = SubcriberForm()
-    else:
-        footerForm = SubcriberForm()
     context = {
-        'footerForm': footerForm,
+    
     }
     return render(request, 'denom/marriage.html', context)
 
 def news(request):
-# ================================================ footer subcribe form =================================
-    # footerForm = SubcriberForm(request.POST)
-    if request.method == 'POST':
-        footerForm = SubcriberForm(request.POST)
-        if footerForm.is_valid():
-            footerForm.save()
-            return redirect('home')
-        else:
-            footerForm = SubcriberForm()
-    else:
-        footerForm = SubcriberForm()
     context = {
-        'footerForm': footerForm,
+        
     }
     return render(request, 'denom/news.html', context)
+
+def footer(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        Subcriber.objects.create(email=email)
+        return redirect(request.META.get('HTTP_REFERER'))
+        
+def feedback(request):
+    if request.method == 'POST':
+        full_name = request.POST['full_name']
+        phone_number = request.POST['phone_number']
+        email = request.POST['email']
+        message = request.POST['message']
+
+        Contact.objects.create(
+            first_name=full_name,
+            phone_number=phone_number,
+            email=email,
+            message=message
+        )
+        return redirect(request.META.get('HTTP_REFERER'))
